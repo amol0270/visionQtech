@@ -17,10 +17,9 @@ export default function ContactSection() {
                         <div>
                             <h4 className="text-lg font-semibold text-gray-800 mb-1">Our Address</h4>
                             <p className="text-gray-600 leading-relaxed">
-                                Sidharth Apartment,<br />
-                                Near Friends Apartment, First Floor,<br />
-                                Chinchapada, Kalyan East,<br />
-                                Mumbai, Maharashtra - 421306
+                                College Road,<br />
+                                Nashik, Maharashtra,<br />
+                                India - 422005
                             </p>
                         </div>
                     </div>

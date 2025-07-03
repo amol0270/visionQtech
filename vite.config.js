@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: "/visionQtech/",
+  base: "/",
   build: {
     outDir: 'dist'
   }
