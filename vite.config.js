@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: "/NVI/",
+  base: "/visionQtech/",
   build: {
     outDir: 'dist'
   }
