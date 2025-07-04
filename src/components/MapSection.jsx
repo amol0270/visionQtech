@@ -12,7 +12,7 @@ export default function MapSection() {
                 <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
                     <iframe
                         title="VisionQ Technology Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.8957650060118!2d73.0928505!3d19.2208761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795f4b216b8bd%3A0xd1b1d7c807434709!2sSiddharth%20Apartments!5e0!3m2!1sen!2sin!4v1718194982974!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1384343683045!2d73.7603847!3d20.0059967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb994f54f533%3A0xef938d11bd1d4c9e!2sCollege%20Rd%2C%20Nashik%2C%20Maharashtra%20422005!5e0!3m2!1sen!2sin!4v1718291234567!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
