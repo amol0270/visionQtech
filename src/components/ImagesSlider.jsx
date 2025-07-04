@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import slide1 from '../assets/images/slide1.jpg';
-// import slide2 from '../assets/images/slide2.jpg';
 import slide2 from '../assets/images/slide2.jpg';
 import slide3 from '../assets/images/slide3.jpg';
 import slide4 from '../assets/images/slide4.jpg';
@@ -25,12 +24,12 @@ const slides = [
   },
   {
     image: slide4,
-    title: <>We Care About <span className="text-red-500x font-semibold">#GEN-NEXT</span></>,
+    title: <>We Care About <span className="font-semibold">#GEN-NEXT</span></>,
     description: 'Step to make a better world',
   },
   {
     image: slide5,
-    title: <>Intelligent <span className="text-blue-500x font-semibold">#Cyber Security</span> Solution for Every Business Model</>,
+    title: <>Intelligent <span className="font-semibold">#Cyber Security</span> Solution for Every Business Model</>,
     description: 'Perfect solution backed with AI and ML',
   },
 ];
@@ -51,8 +50,8 @@ const ImageSlider = () => {
       {/* Slide Image */}
       <img
         src={slides[current].image}
-        alt="slide"
-        className="w-full h-[100vh] object-cover transition duration-600 ease-in-out"
+        alt={`slide-${current}`}
+        className="w-full h-[100vh] object-cover transition duration-700 ease-in-out"
       />
 
       {/* Overlay Content */}

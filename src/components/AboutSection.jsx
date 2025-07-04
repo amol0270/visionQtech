@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import aboutImg from "../assets/images/11.png";
 
@@ -35,28 +36,33 @@ export default function AboutSection() {
     const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
     return (
-        <>
-            <section className="px-4 py-16">
-                <div className="max-w-5xl mx-auto bg-white/80 p-6 sm:p-8 md:p-10 rounded-2xl">
-                    {/* Tab Navigation */}
-                    <div className="flex justify-center gap-6 sm:gap-8 md:gap-10 border-b mb-8">
-                        {tabs.map((tab) => (
-                            <button
-                                key={tab.key}
-                                onClick={() => setSelectedTab(tab)}
-                                className={`pb-2 text-sm sm:text-base md:text-lg font-semibold ${selectedTab.key === tab.key
-                                        ? "border-b-2 border-red-500 text-red-600"
-                                        : "text-gray-600 hover:text-red-500"
-                                    }`}
-                            >
-                                {tab.key}
-                            </button>
-                        ))}
-                    </div>
+        <section className="px-4 py-16">
+            <div className="max-w-5xl mx-auto bg-white/80 p-6 sm:p-8 md:p-10 rounded-2xl">
+                {/* Tab Navigation */}
+                <div className="flex justify-center gap-6 sm:gap-8 md:gap-10 border-b mb-8">
+                    {tabs.map((tab) => (
+                        <motion.button
+                            key={tab.key}
+                            whileHover={{ scale: 1.05 }}
+                            onClick={() => setSelectedTab(tab)}
+                            className={`pb-2 text-sm sm:text-base md:text-lg font-semibold transition-all duration-200 ${selectedTab.key === tab.key
+                                ? "border-b-2 border-red-500 text-red-600"
+                                : "text-gray-600 hover:text-red-500"
+                                }`}
+                        >
+                            {tab.key}
+                        </motion.button>
+                    ))}
+                </div>
 
-                    <div className="flex justify-center">
-                        {/* Content Card */}
-                        <div
+                <div className="flex justify-center">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={selectedTab.key}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.5 }}
                             className="relative w-full border border-red-200 rounded-xl p-4 sm:p-6 md:p-10 bg-cover bg-center shadow-lg"
                             style={{ backgroundImage: `url(${aboutImg})` }}
                         >
@@ -82,12 +88,10 @@ export default function AboutSection() {
                                         ))}
                                 </ul>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
-            </section>
-
-        </>
-
+            </div>
+        </section>
     );
 }
