@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="mt-7 py-5 border-t-1">
-                <p className="text-center text-sm">© 2025 VisionQ Technology. All rights reserved.</p>
+                <p className="text-center text-sm">© 2026 VisionQ Technology. All rights reserved.</p>
             </div>
         </footer>
     );
